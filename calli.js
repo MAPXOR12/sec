@@ -37,7 +37,7 @@ const dateFormat = require("dateformat");
 var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
-const prefix = "s!";
+const prefix = "s+";
 const cooldown = new Set();
 const cdtime = 5;
 ///////////////////////////////////////////////////////////////////////////////
@@ -56,17 +56,16 @@ calli.on("message", message => {
       .setColor(callicolor)
       .setImage(`https://media.discordapp.net/attachments/829751738717306920/835146132023279616/image0.png`)
       .setDescription(`
-👑 OwnerCode 
-(Calli#0001,AMxSakran^#3799)
+👑 Owner MAPXOR
 🤖 Securitybots 
-(Anti Vandalism#6064)
+(PORE)
       `)
       .setThumbnail(`https://media.discordapp.net/attachments/829751738717306920/835145114519208017/image0.gif`)
     message.channel.send({ embed });
   }
 });
 ///////////////////////////////////////////////////////////////////////////////
-calli.login("")
+calli.login("Nzg0MzA0ODQzODA3MzkxNzU1.X8nWzg.SBEZUKQ4L0fNSdmShGn89pQLn4E")
 ///////////////////////////////////////////////////////////////////////////////
 const callienabled  = "";
 const callidisabled = "";
