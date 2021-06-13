@@ -1516,3 +1516,75 @@ calli.on("message", message => {
   }
 });
 ///////////////////////////////////////////////////////////////////////////////
+const inlinereply = require('discord-reply');
+
+const error = "❎"
+const done = "✅"
+client.on('message', msg => {
+    if(msg.content.startsWith(prefix + "report")){
+    const reason = msg.content.split(" ").slice(2).join(" ");
+ let reportschannel = msg.guild.channels.cache.find(channel => channel.name === "report");
+    
+    const user = msg.mentions.users.first();user
+   
+ if(!user) return msg.lineReply(` يرجئ ان تمنشن العضو ${error}`)
+
+ 
+  if(!reason) return msg.lineReply(` اكتب القصة ${error}`)
+             if(user.bot) return msg.lineReply(`لا يمكنك${error} الابلاغ عن بوت`)
+
+             
+               if (user.id == msg.author.id)
+        
+return msg.lineReply(`لا يمكنك الابلاغ على نفسك ${error}`)
+
+    const embed = new Discord.MessageEmbed()
+    .setColor('0fb50f')
+      .addField(`ابلاغ جديد`,
+      `**-----------------**`)
+    
+
+
+
+
+
+  .addField(` اسم العضو المبلغ علية`,
+` ${user.username}`)
+    
+
+    
+    
+    .addField(` ايدي العضو المبلغ علية`,
+ 
+   `${user.id}`)
+    
+
+    
+    
+    .addField(`القصه`,
+
+    `${reason}`)
+    
+
+    
+    
+    .addField(`اسم المبلغ `,
+ 
+   `${msg.author.username}`)
+    
+
+    
+    .addField(`ايدي المبلغ`,
+    ` ${msg.author.id}`)
+
+
+
+
+    .setTimestamp()
+    
+    reportschannel.send(embed)
+    msg.channel.send(`Done ${done}`)
+    
+    }
+    
+    });
