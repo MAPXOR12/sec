@@ -1335,8 +1335,8 @@ calli.on("message", message => {
       .setDescription(`
       
 **Anti Ban**
-Enabled: ${callienabled}
-Warn at: ${config[message.guild.id].banLimit} ${calliwarn} 
+Enabled: ${callienabled} <:4_:863364558759526420>
+Warn at: ${config[message.guild.id].banLimit } ${calliwarn} 
 Punish at: ${config[message.guild.id].banLimit} ${calliban}
 **Anti Kick**
 Enabled: ${callienabled}
